@@ -13,4 +13,16 @@ export class DataService {
       'https://jsonplaceholder.typicode.com/users'
     );
   }
+
+  public getUser(user_id) {
+    return this.http.get(
+      `https://jsonplaceholder.typicode.com/users/${user_id}`
+    );
+  }
+
+  public getPosts() {
+    return this.http.get(
+      'https://jsonplaceholder.typicode.com/posts'
+    );
+  }
 }
